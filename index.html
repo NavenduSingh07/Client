@@ -8,7 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@800&display=swap" rel="stylesheet">
-  <style>
+ 
+ 
+<!-- sticky icon -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+ 
+ <style>
     body {
       /* font-family: 'Arial', sans-serif; */
       margin: 0;
@@ -135,6 +142,110 @@ slid */
     .carousel-caption .btn {
       font-size: 18px;
     }
+
+/* 
+    sticky icon */
+
+    .sticky-icon  {
+	z-index:1;
+	position:fixed;
+	top:50%;
+	right:0%;
+	width:220px;
+	display:flex;
+	flex-direction:column;}  
+.sticky-icon a  {
+	transform:translate(160px,0px);
+	border-radius:50px 0px 0px 50px;
+	text-align:left;
+	margin:2px;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:10px;
+	font-size:22px;
+	font-family:'Oswald', sans-serif;
+	transition:all 0.8s;}
+.sticky-icon a:hover  {
+	color:#FFF;
+	transform:translate(0px,0px);}	
+.sticky-icon a:hover i  {
+	transform:rotate(360deg);}
+/*.search_icon a:hover i  {
+	transform:rotate(360deg);}*/
+.Facebook  {
+	background-color:#2C80D3;
+	color:#FFF;}
+	
+.Youtube  {
+	background-color:#fa0910;
+	color:#FFF;}
+	
+.Twitter  {
+	background-color:#53c5ff;
+	color:#FFF;}
+	
+.Instagram  {
+	background-color:#FD1D1D;
+	color:#FFF;}
+	
+.Google  {
+	background-color:#d34836;
+	color:#FFF;}						
+.sticky-icon a i {
+	background-color:#FFF;
+	height:40px;
+	width:40px;
+	color:#000;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	margin-right:20px;
+	transition:all 0.5s;}
+.sticky-icon a i.fa-facebook-f  {
+	background-color:#FFF;
+	color:#2C80D3;}
+	
+.sticky-icon a i.fa-google-plus-g  {
+	background-color:#FFF;
+	color:#d34836;}
+	
+.sticky-icon a i.fa-instagram  {
+	background-color:#FFF;
+	color:#FD1D1D;}
+	
+.sticky-icon a i.fa-youtube  {
+	background-color:#FFF;
+	color:#fa0910;}
+	
+.sticky-icon a i.fa-twitter  {
+	background-color:#FFF;
+	color:#53c5ff;}
+.fas fa-shopping-cart  {
+	background-color:#FFF;}	
+#myBtn {
+	height:50px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  text-align:center;
+  padding:10px;
+  text-align:center;
+	line-height:40px;
+  border: none;
+  outline: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fa-arrow-circle-up  {
+	font-size:30px;}
+
+#myBtn:hover {
+  background-color: #555;
+}			
   </style>
 </head>
 <body>
@@ -188,7 +299,7 @@ slid */
 <!-- <a href="javascript:void(0);" class="drop_query_btn">
     <span class="drop_btn_txt">Ask a Question</span>
     <span class="drop_icon_mail">
-      <img src="https://www.learnpick.in/public/frontend/images/white_email.png?v=1690446313" alt="">
+      <img src="ht" alt="">
     </span>
   </a> -->
 
@@ -197,7 +308,7 @@ slid */
       <div class="card-body">
         <h1 class="font-weight-bold">Private and group lessons online</h1>
         <p class="font-italic">Don't miss out while you are away from school</p>
-        <a href="https://www.privateteachers.co" target="_self" class="btn btn-primary">Book Now</a>
+        <a href="https:" target="_self" class="btn btn-primary">Book Now</a>
       </div>
     </div>
   </div>   -->
@@ -215,12 +326,14 @@ slid */
       <div class="carousel-item">
         <img src="2.jpg" class="d-block w-100" alt="Second Slide">
         <div class="carousel-caption">
+          <h2>"Empower your teaching journey with personalized and group lessons online. Seize the opportunity to create impactful learning experiences, even beyond the traditional classroom setting. Join us and elevate your tutoring expertise to new heights!"</h2>
           <button class="btn btn-primary btn-lg">Become a Tutor</button>
         </div>
       </div>
       <div class="carousel-item">
         <img src="3.jpg" class="d-block w-100" alt="Third Slide">
         <div class="carousel-caption">
+          <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid repudiandae saepe ducimus esse iusto illum eos, non ipsam labore optio!</h2>
           <button class="btn btn-primary btn-lg">Find tutors</button>
         </div>
       </div>
@@ -234,6 +347,22 @@ slid */
       <span class="sr-only">Next</span>
     </a>
 
+
+
+
+<!-- 
+    sticky icon -->
+
+
+    <!--Start Sticky Icon--> 
+<div class="sticky-icon">
+  <a href="https://www.instagram.com/?hl=en" class="Instagram"><i class="fab fa-instagram"></i> Instagram </a>
+  <a href="https://www.facebook.com/" class="Facebook"><i class="fab fa-facebook-f"> </i> Facebook </a>
+  <a href="https://aboutme.google.com/u/0/?referer=gplus" class="Google"><i class="fab fa-google-plus-g"> </i> Google + </a>
+  <a href="https://www.youtube.com/" class="Youtube"><i class="fab fa-youtube"></i> Youtube </a>
+  <a href="https://twitter.com/login" class="Twitter"><i class="fab fa-twitter"> </i> Twitter </a>   
+</div>
+<!--End Sticky Icon-->
 
 
 
