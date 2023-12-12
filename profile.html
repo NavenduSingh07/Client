@@ -1,188 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tutor Profile</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4; /* Light gray background */
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* Light gray background */
+      }
 
-        .profile-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center; /* Center vertically */
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 20px;
-            background-color: #fff; /* White background */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-        }
+      .profile-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Center vertically */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 20px;
+        background-color: #fff; /* White background */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+      }
 
-        .tutor-details {
-            flex: 1;
-            margin-right: 20px;
-            text-align: center; /* Center text horizontally */
-        }
+      .tutor-details {
+        flex: 1;
+        margin-right: 20px;
+        text-align: center; /* Center text horizontally */
+      }
 
-        .tutor-details h4 {
-            margin: 0 0 10px;
-            color: #333; /* Dark text color */
-        }
+      .tutor-details h4 {
+        margin: 0 0 10px;
+        color: #333; /* Dark text color */
+      }
 
-        .tutor-details p {
-            margin: 0;
-            color: #666; /* Slightly darker text color */
-        }
+      .tutor-details p {
+        margin: 0;
+        color: #666; /* Slightly darker text color */
+      }
 
-        .tutor-avatar img {
-            border-radius: 50%;
-            max-width: 100px;
-            height: auto;
-        }
+      .tutor-avatar img {
+        border-radius: 50%;
+        max-width: 100px;
+        height: auto;
+      }
 
-        .styles_SeoSnippetText__170SK {
-            text-align: center;
-            max-width: 400px; /* Adjust the max-width as needed */
-            margin: 0 auto; /* Center horizontally */
-        }
+      .styles_SeoSnippetText__170SK {
+        text-align: center;
+        max-width: 400px; /* Adjust the max-width as needed */
+        margin: 0 auto; /* Center horizontally */
+      }
 
-        .styles_Headline__QyjLU,
-        .styles_ShortBio__auwUi {
-            display: block;
-            text-align: left; /* Reset text-align for children elements */
-        }
+      .styles_Headline__QyjLU,
+      .styles_ShortBio__auwUi {
+        display: block;
+        text-align: left; /* Reset text-align for children elements */
+      }
 
-        .video-container {
-            flex: 1;
-            max-width: 400px;
-            height: 200px;
-            text-align: center; /* Center text horizontally */
-        }
+      .video-container {
+        flex: 1;
+        max-width: 400px;
+        height: 200px;
+        text-align: center; /* Center text horizontally */
+      }
 
-        .video-container iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-        }
+      .video-container iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #09bd4e; /* Button color */
-            color: #fff; /* Button text color */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-        }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #09bd4e; /* Button color */
+        color: #fff; /* Button text color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+      }
 
-        button:hover {
-            background-color: #082f49; /* Button color on hover */
-        }
+      button:hover {
+        background-color: #082f49; /* Button color on hover */
+      }
+
+      /* card */
+
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #ecf0f3;
+      }
+      .container,
+      .container .img-area,
+      .social-icons a,
+      .buttons button {
+        background: #ecf0f3;
+        box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+      }
+      .container {
+        position: relative;
+        width: 350px;
+        padding: 30px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .container .img-area {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .img-area .inner-area {
+        height: calc(100% - 25px);
+        width: calc(100% - 25px);
+        border-radius: 50%;
+      }
+      .inner-area img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .container .name {
+        font-size: 23px;
+        font-weight: 500;
+        color: #31344b;
+        margin: 10px 0 5px 0;
+      }
+      .container .about {
+        color: #44476a;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .container .social-icons {
+        margin: 15px 0 25px 0;
+      }
+      .social-icons a {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+        display: inline-flex;
+        text-decoration: none;
+        border-radius: 50%;
+      }
+
+      .social-icons a i {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        line-height: 40px;
+      }
+      .social-icons a.fb i {
+        color: #4267b2;
+      }
+      .social-icons a.twitter i {
+        color: #1da1f2;
+      }
+      .social-icons a.insta i {
+        color: #e1306c;
+      }
+      .social-icons a.yt i {
+        color: #ff0000;
+      }
+      .container .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .buttons button {
+        position: relative;
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 12px 0;
+        color: #31344b;
+        font-size: 17px;
+        font-weight: 400;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 4;
+      }
+      .buttons button:first-child {
+        margin-right: 10px;
+      }
+      .buttons button:last-child {
+        margin-left: 10px;
+      }
+      .container .social-share {
+        display: flex;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 5px;
+        justify-content: space-between;
+      }
+      .social-share .row {
+        color: #31344b;
+        font-size: 17px;
+        cursor: pointer;
+        position: relative;
+      }
+      .social-share .row::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 2px;
+        background: #e0e6eb;
+        margin-left: -25px;
+      }
+      .row:first-child::before {
+        background: none;
+      }
+      .social-share .row i.icon-2 {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        color: #31344b;
+        transform: translateY(-50%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+      }
+      .row:nth-child(1):hover i.fa-heart,
+      .row:nth-child(2):hover i.fa-comment {
+        opacity: 1;
+        pointer-events: auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- Tutor Profile Section -->
+    <div class="profile-container">
+      <div class="tutor-details">
+        <div class="tutor-avatar">
+          <img
+            src="https://avatars.preply.com/i/logos/i/logos/avatar_cunatf42fuk.jpg"
+            alt="Tutor english Srinjani S."
+          />
+        </div>
+        <h4>Srinjani S.</h4>
+        <p>Super tutor</p>
+        <!-- Add other details as needed -->
+        <div
+          class="_15uGWh X4eHUe TeMu3z _21X6IW _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+          data-preply-ds-component="LayoutFlex"
+        >
+          <!-- Language Information -->
+          <div
+            class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+            data-preply-ds-component="LayoutFlex"
+          >
+            <div>
+              <div
+                class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                data-preply-ds-component="LayoutFlex"
+              >
+                <div
+                  class="_15uGWh X4eHUe _1o4EVj qh7on_ _3EMNmq _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                  data-preply-ds-component="LayoutFlex"
+                ></div>
+                <ul
+                  class="_15uGWh X4eHUe _1o4EVj qh7on_ _37TKqg _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                  data-preply-ds-component="LayoutFlex"
+                >
+                  <li role="menuitem" tabindex="0">
+                    <p
+                      class="khPkeq _1jP5ux _8nxFNH"
+                      data-preply-ds-component="Text"
+                    >
+                      English
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="styles_SeoSnippetText__170SK">
+          <span class="styles_Headline__QyjLU"
+            ><b
+              >ESL tutor with 2 years of experience with kids and adults</b
+            ></span
+          >&nbsp;
+          <span class="styles_ShortBio__auwUi">
+            I am Sri, I’m 20 years old and I am Indian! At school, I studied all
+            my subjects in English so officially, English is my first language.
+            Right now, I am studying as an exchange student in Japan. My hobby
+            is dancing, cooking and reading books! I also like to travel and
+            learn languages.
+          </span>
+        </p>
+      </div>
+
+      <!-- YouTube Video Embed -->
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/qYQ1XYAuJys"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <button>Book a Demo</button>
+      </div>
+    </div>
 
     <!-- Tutor Profile Section -->
     <div class="profile-container">
-        <div class="tutor-details">
-            <div class="tutor-avatar">
-                <img src="https://avatars.preply.com/i/logos/i/logos/avatar_cunatf42fuk.jpg" alt="Tutor english Srinjani S.">
-            </div>
-            <h4>Srinjani S.</h4>
-            <p>Super tutor</p>
-            <!-- Add other details as needed -->
-            <div class="_15uGWh X4eHUe TeMu3z _21X6IW _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                <!-- Language Information -->
-                <div class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                    <div>
-                        <div class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                            <div class="_15uGWh X4eHUe _1o4EVj qh7on_ _3EMNmq _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex"></div>
-                            <ul class="_15uGWh X4eHUe _1o4EVj qh7on_ _37TKqg _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                                <li role="menuitem" tabindex="0">
-                                    <p class="khPkeq _1jP5ux _8nxFNH" data-preply-ds-component="Text">English</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="styles_SeoSnippetText__170SK">
-                <span class="styles_Headline__QyjLU"><b>ESL tutor with 2 years of experience with kids and adults</b></span>&nbsp;
-                <span class="styles_ShortBio__auwUi">
-                    I am Sri, I’m 20 years old and I am Indian! At school, I studied all my subjects in English so officially, English is my first language. Right now, I am studying as an exchange student in Japan.
-                    My hobby is dancing, cooking and reading books! I also like to travel and learn languages.
-                </span>
-            </p> 
+      <div class="tutor-details">
+        <div class="tutor-avatar">
+          <img
+            src="https://avatars.preply.com/i/logos/i/logos/avatar_cunatf42fuk.jpg"
+            alt="Tutor english Srinjani S."
+          />
         </div>
+        <h4>Srinjani S.</h4>
+        <p>Super tutor</p>
+        <!-- Add other details as needed -->
+        <div
+          class="_15uGWh X4eHUe TeMu3z _21X6IW _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+          data-preply-ds-component="LayoutFlex"
+        >
+          <!-- Language Information -->
+          <div
+            class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+            data-preply-ds-component="LayoutFlex"
+          >
+            <div>
+              <div
+                class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                data-preply-ds-component="LayoutFlex"
+              >
+                <div
+                  class="_15uGWh X4eHUe _1o4EVj qh7on_ _3EMNmq _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                  data-preply-ds-component="LayoutFlex"
+                ></div>
+                <ul
+                  class="_15uGWh X4eHUe _1o4EVj qh7on_ _37TKqg _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM"
+                  data-preply-ds-component="LayoutFlex"
+                >
+                  <li role="menuitem" tabindex="0">
+                    <p
+                      class="khPkeq _1jP5ux _8nxFNH"
+                      data-preply-ds-component="Text"
+                    >
+                      English
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="styles_SeoSnippetText__170SK">
+          <span class="styles_Headline__QyjLU"
+            ><b
+              >ESL tutor with 2 years of experience with kids and adults</b
+            ></span
+          >&nbsp;
+          <span class="styles_ShortBio__auwUi">
+            I am Sri, I’m 20 years old and I am Indian! At school, I studied all
+            my subjects in English so officially, English is my first language.
+            Right now, I am studying as an exchange student in Japan. My hobby
+            is dancing, cooking and reading books! I also like to travel and
+            learn languages.
+          </span>
+        </p>
+      </div>
 
-        <!-- YouTube Video Embed -->
-        <div class="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/qYQ1XYAuJys"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
-            <button>Book a Demo</button>
-        </div>
+      <!-- YouTube Video Embed -->
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/qYQ1XYAuJys"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <button>Book a Demo</button>
+      </div>
     </div>
 
+    <!-- card -->
 
-
-
-
-
-    <!-- Tutor Profile Section -->
-    <div class="profile-container">
-        <div class="tutor-details">
-            <div class="tutor-avatar">
-                <img src="https://avatars.preply.com/i/logos/i/logos/avatar_cunatf42fuk.jpg" alt="Tutor english Srinjani S.">
-            </div>
-            <h4>Srinjani S.</h4>
-            <p>Super tutor</p>
-            <!-- Add other details as needed -->
-            <div class="_15uGWh X4eHUe TeMu3z _21X6IW _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                <!-- Language Information -->
-                <div class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                    <div>
-                        <div class="_15uGWh _3rnoor X4eHUe _1o4EVj hUFwKI _20KxRV _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                            <div class="_15uGWh X4eHUe _1o4EVj qh7on_ _3EMNmq _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex"></div>
-                            <ul class="_15uGWh X4eHUe _1o4EVj qh7on_ _37TKqg _1pwa5v _2x1aeM _1WH1_Q _2JlASK GWHMDM" data-preply-ds-component="LayoutFlex">
-                                <li role="menuitem" tabindex="0">
-                                    <p class="khPkeq _1jP5ux _8nxFNH" data-preply-ds-component="Text">English</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="styles_SeoSnippetText__170SK">
-                <span class="styles_Headline__QyjLU"><b>ESL tutor with 2 years of experience with kids and adults</b></span>&nbsp;
-                <span class="styles_ShortBio__auwUi">
-                    I am Sri, I’m 20 years old and I am Indian! At school, I studied all my subjects in English so officially, English is my first language. Right now, I am studying as an exchange student in Japan.
-                    My hobby is dancing, cooking and reading books! I also like to travel and learn languages.
-                </span>
-            </p> 
+    <body>
+      <div class="container">
+        <div class="img-area">
+          <div class="inner-area">
+            <img
+              src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+              alt=""
+            />
+          </div>
         </div>
-
-        <!-- YouTube Video Embed -->
-        <div class="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/qYQ1XYAuJys"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            ></iframe>
-            <button>Book a Demo</button>
+        <div class="name">John Doe</div>
+        <div class="about">Manager</div>
+        <div class="social-icons">
+          <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="twitter"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
         </div>
-    </div>
-
-</body>
+        <div class="buttons">
+          <button>Chat</button>
+          <button>Follow me</button>
+        </div>
+        <div class="social-share">
+          <div class="row">
+            <i class="fa fa-heart"></i>
+            <span>30.4k </span>
+          </div>
+          <div class="row">
+            <i class="fa fa-comment"></i>
+            <span>54.2k</span>
+          </div>
+          <div class="row">
+            <i class="fa fa-share"></i>
+            <span>38.5k</span>
+          </div>
+        </div>
+      </div>
+    </body>
+  </body>
 </html>
